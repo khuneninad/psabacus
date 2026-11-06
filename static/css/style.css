@@ -1145,30 +1145,6 @@ img {
   letter-spacing: 0.2px;
 }
 
-/* Floating WhatsApp Quick Action Button */
-.floating-whatsapp-btn {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 999;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
-  font-size: 2rem;
-  transition: var(--transition-normal);
-}
-
-.floating-whatsapp-btn:hover {
-  transform: scale(1.1) translateY(-3px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
-}
-
 /* ==========================================================================
    RESPONSIVE DESIGN
    ========================================================================== */
@@ -1268,13 +1244,6 @@ img {
   }
   .modal-title {
     font-size: 1.5rem;
-  }
-  .floating-whatsapp-btn {
-    bottom: 1.25rem;
-    right: 1.25rem;
-    width: 52px;
-    height: 52px;
-    font-size: 1.6rem;
   }
 }
 

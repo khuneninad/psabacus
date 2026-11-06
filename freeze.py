@@ -190,6 +190,14 @@ WhatsApp Contact: +91 9404853704 | Email: psabacus01@gmail.com
     with open(os.path.join(BUILD_DIR, 'HOW_TO_DEPLOY_ON_GODADDY.txt'), 'w', encoding='utf-8') as f:
         f.write(readme_content)
 
+    # 5b. Copy GitHub Pages configuration files if present
+    cname_src = os.path.join(BASE_DIR, 'CNAME')
+    if os.path.exists(cname_src):
+        shutil.copy(cname_src, os.path.join(BUILD_DIR, 'CNAME'))
+    nojekyll_src = os.path.join(BASE_DIR, '.nojekyll')
+    if os.path.exists(nojekyll_src):
+        shutil.copy(nojekyll_src, os.path.join(BUILD_DIR, '.nojekyll'))
+
     # 6. Create 1-Click ZIP Archive for GoDaddy
     zip_path = os.path.join(BASE_DIR, 'godaddy_public_html_ready')
     shutil.make_archive(zip_path, 'zip', BUILD_DIR)

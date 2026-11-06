@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% block title %}Book a Franchise | Franchise Opportunities | PS ABACUS{% endblock %}
+
+{% block content %}
+<!-- Dark Header -->
+<div class="dark-section-header franchise-header" style="padding: 4.5rem 1rem 4rem;">
+  <div class="container">
+    <h1 class="section-title">
+      Book a <span class="highlight-gold">Franchise</span>
+    </h1>
+    <p class="section-subtitle">
+      {{ franchise.subheadline }} &mdash; A Journey to Excellence
+    </p>
+  </div>
+</div>
+
+<!-- Three Core Franchise Pillars with Improvised SVGs (Image 1) -->
+<section style="background: #ffffff; padding: 2rem 0 4rem;">
+  <div class="container">
+    <div class="franchise-cards-grid" style="margin-top: 0;">
+      {% for pillar in franchise.three_pillars %}
+      <div class="franchise-feature-card">
+        <div class="feature-circle-icon">
+          <img src="/static/images/{{ pillar.icon }}" alt="{{ pillar.title }} Icon">
+        </div>
+        <h3 class="franchise-card-title">{{ pillar.title }}</h3>
+        <p class="franchise-card-text">
+          {{ pillar.description }}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Golden Highlight Banner (Image 1 Bottom) -->
+  <div class="golden-banner-section" style="margin-bottom: 4rem;">
+    <div class="golden-banner-inner">
+      <div class="banner-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <h2 class="golden-banner-title">
+        {{ franchise.golden_banner.title }}
+      </h2>
+      <p class="golden-banner-text">
+        {{ franchise.golden_banner.text }}
+      </p>
+      <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hello%20PS%20ABACUS,%20I%20am%20interested%20in%20booking%20a%20franchise%20in%20my%20city." class="btn-banner-cta" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> Book a Franchise on WhatsApp: {{ site.contact_phone_1_raw }}
+      </a>
+    </div>
+  </div>
+
+  <!-- Franchise Support Ecosystem -->
+  <div class="container">
+    <div class="section-head-light">
+      <h2 class="title">Complete Support From Day 1</h2>
+      <p class="subtitle">We equip you with everything needed to launch, market, and manage a profitable learning center.</p>
+    </div>
+
+    <div class="benefits-grid" style="margin-bottom: 4rem;">
+      {% for item in franchise.franchise_benefits %}
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fa-solid fa-award"></i>
+        </div>
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- How It Works Step-by-Step -->
+    <div style="background: #000000; color: #ffffff; border-radius: 20px; padding: 3.5rem 2rem; margin-bottom: 4rem;">
+      <h3 style="text-align: center; font-size: 2.2rem; margin-bottom: 2.5rem;">4 Simple Steps to Book a Franchise</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
+        <div style="text-align: center;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: #f5a623; color: #000000; font-size: 1.4rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">1</div>
+          <h4 style="color: #ffffff; margin-bottom: 0.5rem;">Connect on WhatsApp</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Message us at <strong>{{ site.contact_phone_1_raw }}</strong> with your city and location details.</p>
+        </div>
+
+        <div style="text-align: center;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: #f5a623; color: #000000; font-size: 1.4rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">2</div>
+          <h4 style="color: #ffffff; margin-bottom: 0.5rem;">Discovery Discussion</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Discuss local student demand, investment tier, and center models.</p>
+        </div>
+
+        <div style="text-align: center;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: #f5a623; color: #000000; font-size: 1.4rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">3</div>
+          <h4 style="color: #ffffff; margin-bottom: 0.5rem;">Teacher Training</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Comprehensive training and certification in Abacus &amp; Vedic Maths methodology.</p>
+        </div>
+
+        <div style="text-align: center;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: #f5a623; color: #000000; font-size: 1.4rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">4</div>
+          <h4 style="color: #ffffff; margin-bottom: 0.5rem;">Launch Center</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Receive your course materials, marketing kits, and welcome your first students!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Direct Contact & Connected Franchise Inquiry Form -->
+    <div style="max-width: 850px; margin: 0 auto; background: #ffffff; border: 2px solid #25d366; border-radius: 20px; padding: 3.5rem 2.5rem; box-shadow: 0 15px 35px rgba(37, 211, 102, 0.12);" class="inquiry-form-container">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div style="width: 70px; height: 70px; border-radius: 50%; background: #dcfce7; color: #25d366; font-size: 2.3rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; border: 1.5px solid #86efac;">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+        <h3 style="font-size: 2.2rem; font-weight: 800; color: #000000; margin-bottom: 0.6rem;">
+          Book a Franchise Inquiry
+        </h3>
+        <p style="font-size: 1.05rem; color: #4b5563; max-width: 650px; margin: 0 auto 1.5rem; line-height: 1.6;">
+          Submit your proposed center details below. Our director will review and send you the complete franchise kit and fee structure.
+        </p>
+      </div>
+
+      <!-- Status Alert Box -->
+      <div class="form-status-message"></div>
+
+      <!-- Google Connected Franchise Form -->
+      <form class="google-sheet-inquiry-form">
+        <input type="hidden" name="type" value="Franchise Partnership">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Full Name *</label>
+            <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">WhatsApp / Phone *</label>
+            <input type="tel" name="phone" class="form-control" placeholder="10-digit mobile number" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Proposed City / Locality *</label>
+            <input type="text" name="city" class="form-control" placeholder="e.g. Pune, Nagpur, Nashik, etc." required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Proposed Center Model</label>
+            <select name="franchise_model" class="form-control form-select">
+              <option value="Home-Based Center">Home-Based Center</option>
+              <option value="Dedicated Commercial Center">Dedicated Commercial Center</option>
+              <option value="School / Tuition Tie-Up">School / Tuition Tie-Up</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Tell Us About Your Space &amp; Background</label>
+            <textarea name="message" rows="3" class="form-control" placeholder="Space available (approx sq ft), prior teaching experience if any, and any questions..."></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <button type="submit" class="btn-form-submit">
+              <span>Submit Franchise Inquiry</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Instant Direct Contact Buttons (Both Numbers Included) -->
+      <div style="border-top: 1px dashed #cbd5e1; margin-top: 2.5rem; padding-top: 2rem; text-align: center;">
+        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1rem;">Prefer to talk immediately? Connect directly with our team:</p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hello%20PS%20ABACUS,%20I%20am%20interested%20in%20booking%20a%20franchise%20in%20my%20city." class="btn-primary" style="background: #25d366; border-color: #25d366; color: #ffffff; padding: 0.75rem 1.75rem; font-size: 0.95rem;" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp: {{ site.contact_phone_1_raw }}
+          </a>
+          <a href="tel:+91{{ site.contact_phone_1_raw }}" class="btn-secondary" style="border-color: #1e293b; color: #1e293b; padding: 0.75rem 1.5rem; font-size: 0.95rem;">
+            <i class="fa-solid fa-phone"></i> Call: {{ site.contact_phone_1_raw }}
+          </a>
+          <a href="tel:+91{{ site.contact_phone_2_raw }}" class="btn-secondary" style="border-color: #1e293b; color: #1e293b; padding: 0.75rem 1.5rem; font-size: 0.95rem;">
+            <i class="fa-solid fa-phone"></i> Call: {{ site.contact_phone_2_raw }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

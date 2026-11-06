@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}About Us | Piyushlok Education &amp; PS ABACUS{% endblock %}
+
+{% block content %}
+<!-- Dark Header -->
+<div class="dark-section-header" style="padding: 4.5rem 1rem 3.5rem;">
+  <div class="container">
+    <h1 class="section-title">
+      About <span class="highlight-gold">PS ABACUS</span>
+    </h1>
+    <p class="section-subtitle">
+      A Journey to Excellence in mental arithmetic, brain development, and foundational learning.
+    </p>
+  </div>
+</div>
+
+<section style="padding: 4.5rem 0; background: #ffffff;">
+  <div class="container">
+    <!-- Story & Mission Grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; margin-bottom: 5rem;">
+      <div>
+        <div class="msme-badge-pill" style="font-size: 0.85rem; padding: 0.4rem 1.1rem; margin-bottom: 1.2rem;">
+          <i class="fa-solid fa-ribbon"></i> Certified &amp; Recognized
+        </div>
+        <h2 style="font-size: 2.4rem; font-weight: 800; color: #000000; margin-bottom: 1.2rem; line-height: 1.25;">
+          Empowering Children To Think Faster Than A Calculator
+        </h2>
+        <p style="font-size: 1.05rem; color: #4b5563; line-height: 1.8; margin-bottom: 1.2rem;">
+          PS ABACUS (under <strong>Piyushlok Education</strong>) was founded with a singular vision: to liberate children from math anxiety and inspire genuine joy in learning through scientific, sensory-motor mental arithmetic techniques &mdash; <em>A Journey to Excellence</em>.
+        </p>
+        <p style="font-size: 1.05rem; color: #4b5563; line-height: 1.8;">
+          Over the past 5+ years, we have designed and refined our own proprietary curriculum, trained passionate educators, and expanded across 15+ centers, transforming more than 500 students into confident, razor-sharp problem solvers.
+        </p>
+      </div>
+
+      <div style="background: #000000; color: #ffffff; border-radius: 20px; padding: 3rem 2.5rem; text-align: center; border: 2px solid var(--primary-gold); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);">
+        <div class="hero-logo-emblem" style="width: 155px; height: 125px; margin: 0 auto 1rem;">
+          <img src="/static/images/logo-transparent.png" alt="PS ABACUS Logo">
+        </div>
+        <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: #ffffff;">Piyushlok Education</h3>
+        <p style="color: var(--primary-gold); font-weight: 700; margin-bottom: 1.5rem; font-size: 1.05rem; letter-spacing: 0.5px;">
+          "A Journey to Excellence"
+        </p>
+        <div style="background: #141820; padding: 1.2rem; border-radius: 12px; border: 1px solid #232936; text-align: left; font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;">
+          <p style="margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-check" style="color: #f5a623;"></i> <strong>MSME Registered:</strong> Recognized under Ministry of MSME.</p>
+          <p style="margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-check" style="color: #f5a623;"></i> <strong>Proprietary Books:</strong> Self-developed copyright-protected syllabus.</p>
+          <p><i class="fa-solid fa-circle-check" style="color: #f5a623;"></i> <strong>Standardized Certification:</strong> Nationally respected level grading.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Values / 3 Pillars -->
+    <div class="section-head-light" style="margin-bottom: 3rem;">
+      <h2 class="title">Our Guiding Principles</h2>
+      <p class="subtitle">What sets PS ABACUS apart in modern educational pedagogy.</p>
+    </div>
+
+    <div class="franchise-cards-grid" style="margin-top: 0; margin-bottom: 4rem;">
+      <div class="franchise-feature-card">
+        <div class="feature-circle-icon">
+          <i class="fa-solid fa-brain" style="font-size: 2rem; color: #d98e16;"></i>
+        </div>
+        <h3 class="franchise-card-title">Whole Brain Growth</h3>
+        <p class="franchise-card-text">
+          Traditional school maths activates only the analytical left brain. Abacus bead visualization engages both hemispheres for photographic memory and spatial agility.
+        </p>
+      </div>
+
+      <div class="franchise-feature-card">
+        <div class="feature-circle-icon">
+          <i class="fa-solid fa-book-bookmark" style="font-size: 2rem; color: #d98e16;"></i>
+        </div>
+        <h3 class="franchise-card-title">Original Curriculum</h3>
+        <p class="franchise-card-text">
+          No generic third-party workbooks. Every exercise in our curriculum is classroom-tested and graded sequentially for optimum cognitive retention.
+        </p>
+      </div>
+
+      <div class="franchise-feature-card">
+        <div class="feature-circle-icon">
+          <i class="fa-solid fa-heart-pulse" style="font-size: 2rem; color: #d98e16;"></i>
+        </div>
+        <h3 class="franchise-card-title">Individual Care</h3>
+        <p class="franchise-card-text">
+          Every child's learning velocity is honored. Our small batch sizes guarantee that no child is left behind or feels overwhelmed.
+        </p>
+      </div>
+    </div>
+
+    <!-- Call to Action Banner -->
+    <div style="background: var(--primary-gold); border-radius: 16px; padding: 3rem 2rem; text-align: center; color: #000000;">
+      <h3 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 1rem;">Experience The Transformation</h3>
+      <p style="font-size: 1.15rem; max-width: 650px; margin: 0 auto 1.8rem; font-weight: 500;">
+        Have questions? Chat directly with our coordinator on WhatsApp!
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hello%20PS%20ABACUS,%20I%20would%20like%20more%20details%20about%20your%20mission%20and%20classes." class="btn-primary" style="background: #000000; color: #ffffff; border-color: #000000;" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp ({{ site.contact_phone_1_raw }})
+        </a>
+        <a href="tel:+91{{ site.contact_phone_2_raw }}" class="btn-secondary" style="border-color: #000000; color: #000000; background: rgba(0,0,0,0.05);">
+          <i class="fa-solid fa-phone"></i> Call: {{ site.contact_phone_2_raw }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

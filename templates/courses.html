@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Our Courses | Abacus, Vedic Maths & Handwriting | PS ABACUS{% endblock %}
+
+{% block content %}
+<!-- Dark Header -->
+<div class="dark-section-header" style="padding: 4.5rem 1rem 3.5rem;">
+  <div class="container">
+    <h1 class="section-title">
+      Our <span class="highlight-gold">Courses</span>
+    </h1>
+    <p class="section-subtitle">
+      Comprehensive, classroom-tested programs designed to unlock every child's mathematical and cognitive potential &mdash; A Journey to Excellence.
+    </p>
+  </div>
+</div>
+
+<!-- Courses Grid with Improvised Vector Icons -->
+<section style="padding: 4rem 0 5rem; background: #ffffff;">
+  <div class="container">
+    <div class="courses-grid" style="margin-top: 0;">
+      {% for course in courses %}
+      <div class="course-card" id="{{ course.slug }}">
+        <div class="course-card-top">
+          <div class="course-icon-badge">
+            <img src="/static/images/{{ course.icon }}" alt="{{ course.title }} Icon" onerror="this.onerror=null; this.src='static/images/extracted/icon_{{ 'vedic' if course.slug == 'vedic-maths' else course.slug }}.png';">
+          </div>
+        </div>
+
+        <div class="course-card-body">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <h2 class="course-title" style="margin-bottom: 0;">{{ course.title }}</h2>
+            <span style="font-size: 0.75rem; font-weight: 700; background: #fff8eb; color: #d98e16; padding: 0.25rem 0.6rem; border-radius: 9999px; border: 1px solid #fcd34d;">
+              {{ course.badge }}
+            </span>
+          </div>
+
+          <p class="course-description">
+            {{ course.description }}
+          </p>
+
+          <p style="font-size: 0.92rem; color: #64748b; margin-bottom: 1.5rem; line-height: 1.6;">
+            {{ course.details }}
+          </p>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem; font-size: 0.88rem;">
+            <div style="margin-bottom: 0.4rem;"><strong>Structure:</strong> {{ course.levels }}</div>
+            <div><strong>Format:</strong> {{ course.duration_per_level }}</div>
+          </div>
+
+          <!-- Benefits Checklist -->
+          <ul class="course-checklist">
+            {% for item in course.benefits %}
+            <li>
+              <span class="check-icon">&#10004;</span>
+              <span>{{ item }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+
+          <div class="course-card-footer">
+            <span class="course-age-pill">
+              <i class="fa-solid fa-child"></i> {{ course.age_group }}
+            </span>
+            <a href="https://wa.me/{{ site.contact_whatsapp }}?text={{ course.whatsapp_msg|urlencode }}" class="btn-primary" style="padding: 0.55rem 1.2rem; font-size: 0.88rem; background: #25d366; border-color: #25d366; color: #ffffff;" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Inquire on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Course Comparison / Benefits Matrix -->
+    <div style="margin-top: 5rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 3rem 2rem;">
+      <h3 style="font-size: 2rem; font-weight: 800; text-align: center; margin-bottom: 1rem;">Which Course Is Right For Your Child?</h3>
+      <p style="text-align: center; color: #64748b; max-width: 700px; margin: 0 auto 2.5rem;">
+        Each PS ABACUS program targets distinct neurological and developmental milestones. Many students enroll concurrently in Abacus + Handwriting or Vedic Maths + Handwriting.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div style="background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1.5px solid #e2e8f0;">
+          <h4 style="color: #f5a623; font-size: 1.3rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-calculator"></i> Abacus (Ages 5-14)</h4>
+          <p style="font-size: 0.92rem; color: #4b5563; line-height: 1.6;">
+            Best for young children developing foundational number sense. Overcomes math phobia and instills lifelong lightning-fast mental visualization skills.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1.5px solid #e2e8f0;">
+          <h4 style="color: #f5a623; font-size: 1.3rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-brain"></i> Vedic Maths (Ages 9+)</h4>
+          <p style="font-size: 0.92rem; color: #4b5563; line-height: 1.6;">
+            Best for middle &amp; high schoolers, Olympiad aspirants, and competitive exam preparation. Provides instantaneous mental calculation shortcuts.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1.5px solid #e2e8f0;">
+          <h4 style="color: #f5a623; font-size: 1.3rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-pen-nib"></i> Handwriting (All Ages)</h4>
+          <p style="font-size: 0.92rem; color: #4b5563; line-height: 1.6;">
+            Essential for students losing marks due to messy handwriting or slow speed during board and term examinations. Fast visible improvement.
+          </p>
+        </div>
+      </div>
+
+      <!-- Direct Contact Prompt -->
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hello%20PS%20ABACUS,%20I%20have%20questions%20about%20course%20enrollment." class="btn-primary" style="background: #25d366; border-color: #25d366; color: #ffffff;" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp ({{ site.contact_phone_1_raw }})
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

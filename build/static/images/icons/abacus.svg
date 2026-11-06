@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="abacusFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="beadGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe484"/>
+      <stop offset="50%" stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="beadActive" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="abacusShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Protective Frame -->
+  <rect x="10" y="12" width="80" height="76" rx="8" fill="url(#abacusFrame)" stroke="#334155" stroke-width="2" filter="url(#abacusShadow)"/>
+  
+  <!-- Digital / Bead Counter Header Window -->
+  <rect x="25" y="17" width="50" height="10" rx="3" fill="#020617" stroke="#475569" stroke-width="1"/>
+  <!-- Calculation Beads Display Indicator -->
+  <circle cx="37" cy="22" r="2.5" fill="#38bdf8"/>
+  <circle cx="50" cy="22" r="2.5" fill="#38bdf8"/>
+  <circle cx="63" cy="22" r="2.5" fill="#38bdf8"/>
+
+  <!-- Inner Abacus Working Area -->
+  <rect x="16" y="31" width="68" height="51" rx="4" fill="#090d16" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Vertical Counting Rods (5 Rods) -->
+  <line x1="26" y1="31" x2="26" y2="82" stroke="#64748b" stroke-width="2"/>
+  <line x1="38" y1="31" x2="38" y2="82" stroke="#64748b" stroke-width="2"/>
+  <line x1="50" y1="31" x2="50" y2="82" stroke="#64748b" stroke-width="2"/>
+  <line x1="62" y1="31" x2="62" y2="82" stroke="#64748b" stroke-width="2"/>
+  <line x1="74" y1="31" x2="74" y2="82" stroke="#64748b" stroke-width="2"/>
+
+  <!-- Horizontal Beam Divider -->
+  <rect x="15" y="44" width="70" height="4" fill="#334155" stroke="#475569" stroke-width="0.8"/>
+  <circle cx="50" cy="46" r="1.5" fill="#ffffff"/> <!-- Center reckoning unit dot -->
+
+  <!-- Upper Deck Beads (Value: 5 each) -->
+  <ellipse cx="26" cy="37" rx="4.8" ry="3.2" fill="url(#beadGold)"/>
+  <ellipse cx="38" cy="41" rx="4.8" ry="3.2" fill="url(#beadActive)"/> <!-- Down/active -->
+  <ellipse cx="50" cy="37" rx="4.8" ry="3.2" fill="url(#beadGold)"/>
+  <ellipse cx="62" cy="41" rx="4.8" ry="3.2" fill="url(#beadActive)"/>
+  <ellipse cx="74" cy="37" rx="4.8" ry="3.2" fill="url(#beadGold)"/>
+
+  <!-- Lower Deck Beads (Value: 1 each) -->
+  <!-- Rod 1 -->
+  <ellipse cx="26" cy="52" rx="4.8" ry="3" fill="url(#beadGold)"/>
+  <ellipse cx="26" cy="62" rx="4.8" ry="3" fill="url(#beadGold)"/>
+  <ellipse cx="26" cy="69" rx="4.8" ry="3" fill="url(#beadGold)"/>
+  <ellipse cx="26" cy="76" rx="4.8" ry="3" fill="url(#beadGold)"/>
+
+  <!-- Rod 2 (Active math calculation state) -->
+  <ellipse cx="38" cy="51" rx="4.8" ry="3" fill="url(#beadActive)"/>
+  <ellipse cx="38" cy="57" rx="4.8" ry="3" fill="url(#beadActive)"/>
+  <ellipse cx="38" cy="70" rx="4.8" ry="3" fill="url(#beadGold)"/>
+  <ellipse cx="38" cy="77" rx="4.8" ry="3" fill="url(#beadGold)"/>
+
+  <!-- Rod 3 (Center) -->
+  <ellipse cx="50" cy="51" rx="4.8" ry="3" fill="url(#beadActive)"/>
+  <ellipse cx="50" cy="57" rx="4.8" ry="3" fill="url(#beadActive)"/>
+  <ellipse cx="50" cy="63" rx="4.8" ry="3" fill="url(#beadActive)"/>
+  <ellipse cx="50" cy="77" rx="4.8" ry="3" fill="url(#beadGold)"/>
+
+  <!-- Rod 4 -->
+  <ellipse cx="62" cy="51" rx="4.8" ry="3" fill="url(#beadGold)"/>
+  <ellipse cx="62" cy="65" rx="4.8" ry="3" fill="url(#beadGold)"/>
+  <ellipse cx="62" cy="71" rx="4.8" ry="3" fill="url(#beadGold)"/>
+  <ellipse cx="62" cy="77" rx="4.8" ry="3" fill="url(#beadGold)"/>
+
+  <!-- Rod 5 -->
+  <ellipse cx="74" cy="51" rx="4.8" ry="3" fill="url(#beadActive)"/>
+  <ellipse cx="74" cy="65" rx="4.8" ry="3" fill="url(#beadGold)"/>
+  <ellipse cx="74" cy="71" rx="4.8" ry="3" fill="url(#beadGold)"/>
+  <ellipse cx="74" cy="77" rx="4.8" ry="3" fill="url(#beadGold)"/>
+</svg>

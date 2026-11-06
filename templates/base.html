@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!-- 
+========================================================================
+  PS ABACUS - Official Website
+  Website Created by: Ninad Khune
+  Copyright (c) 2026 Ninad Khune. All Rights Reserved.
+  Pure Static & Mobile Optimized Architecture for GoDaddy Hosting
+  Contact: +91 9404853704 / +91 8275635904 | Email: psabacus01@gmail.com
+  Slogan: A Journey to Excellence
+========================================================================
+-->
+<html lang="en" data-creator="Ninad Khune" data-developer="Ninad Khune">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Website Metadata & Invisible Creator Watermarks -->
+  <title>{% block title %}{{ site.brand_name }} | {{ site.tagline }}{% endblock %}</title>
+  <meta name="description" content="PS ABACUS — A Journey to Excellence. Certified coaching in Abacus, Vedic Maths, and Handwriting. Book a Franchise with very low investment and proprietary course materials. Contact: 9404853704 / 8275635904.">
+  <meta name="author" content="Ninad Khune">
+  <meta name="creator" content="Ninad Khune">
+  <meta name="designer" content="Ninad Khune">
+  <meta name="developer" content="Ninad Khune">
+  <meta name="keywords" content="PS ABACUS, A Journey to Excellence, Abacus classes, Vedic Maths, Handwriting improvement, Book a Franchise, Piyushlok Education, Ninad Khune website">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="PS ABACUS — A Journey to Excellence">
+  <meta property="og:description" content="Certified training in Abacus, Vedic Maths & Handwriting. Book a Franchise today. Contact: 9404853704 / 8275635904">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon using official new emblem -->
+  <link rel="icon" type="image/png" href="/static/images/logo-transparent.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/animations.css">
+  
+  <!-- FontAwesome Icons for crisp UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  {% block extra_head %}{% endblock %}
+</head>
+<body data-website-created-by="Ninad Khune" data-signature="NK-PSABACUS-2026">
+
+  <!-- Invisible Verification Watermark (Certified by Ninad Khune) -->
+  <div style="display:none;" id="creator-verification-watermark" aria-hidden="true" data-author="Ninad Khune" data-project="PS ABACUS">
+    Website created by Ninad Khune. All rights reserved. Helpline: 9404853704 / 8275635904. Slogan: A Journey to Excellence.
+  </div>
+
+  <!-- Main Sticky Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Main Logo & Brand Lockup -->
+        <a href="/" class="brand-lockup">
+          <div class="brand-logo-wrap">
+            <img src="/static/images/logo-transparent.png" alt="PS ABACUS Official Logo" class="brand-logo">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">PS <span class="logo-accent">ABACUS</span></span>
+            <span class="brand-tagline-nav">A Journey to Excellence</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link {% if request.path == '/' %}active{% endif %}">Home</a></li>
+          <li><a href="/courses" class="nav-link {% if request.path == '/courses' %}active{% endif %}">Our Courses</a></li>
+          <li><a href="/franchise" class="nav-link {% if request.path == '/franchise' %}active{% endif %}">Book a Franchise</a></li>
+          <li><a href="/about" class="nav-link {% if request.path == '/about' %}active{% endif %}">About Us</a></li>
+          <li><a href="/contact" class="nav-link {% if request.path == '/contact' %}active{% endif %}">Contact</a></li>
+        </ul>
+
+        <!-- Direct WhatsApp Action Button -->
+        <div class="nav-actions">
+          <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hello%20PS%20ABACUS,%20I%20would%20like%20to%20inquire%20about%20classes%20and%20franchise." class="btn-whatsapp-nav" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp: {{ site.contact_phone_1_raw }}</span>
+          </a>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <div class="brand-lockup">
+        <img src="/static/images/logo-transparent.png" alt="PS ABACUS Logo" style="height: 48px; width: auto;">
+        <div class="brand-name">PS <span class="logo-accent">ABACUS</span></div>
+      </div>
+      <button class="mobile-close-btn" aria-label="Close navigation">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="/" class="mobile-nav-link">Home</a></li>
+      <li><a href="/courses" class="mobile-nav-link">Our Courses (Abacus, Vedic, Handwriting)</a></li>
+      <li><a href="/franchise" class="mobile-nav-link">Book a Franchise</a></li>
+      <li><a href="/about" class="mobile-nav-link">About Piyushlok Education</a></li>
+      <li><a href="/contact" class="mobile-nav-link">Contact Information</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hello%20PS%20ABACUS,%20I%20have%20an%20inquiry." class="btn-primary" style="width: 100%; justify-content: center; background: #25d366; border-color: #25d366; color: #ffffff;" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp: {{ site.contact_phone_1_raw }}
+      </a>
+      <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
+        <a href="tel:+91{{ site.contact_phone_1_raw }}" class="btn-secondary" style="flex: 1; justify-content: center; font-size: 0.85rem; padding: 0.6rem 0.4rem;">
+          <i class="fa-solid fa-phone"></i> {{ site.contact_phone_1_raw }}
+        </a>
+        <a href="tel:+91{{ site.contact_phone_2_raw }}" class="btn-secondary" style="flex: 1; justify-content: center; font-size: 0.85rem; padding: 0.6rem 0.4rem;">
+          <i class="fa-solid fa-phone"></i> {{ site.contact_phone_2_raw }}
+        </a>
+      </div>
+      <div style="margin-top: 1.5rem; text-align: center; font-size: 0.85rem; color: #94a3b8;">
+        Website created by <span style="color: #f5a623; font-weight: 700;">Ninad Khune</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Page Body Content -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Site Footer with Prominent Visible Watermark -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <div class="brand-lockup" style="margin-bottom: 1rem;">
+            <img src="/static/images/logo-transparent.png" alt="PS ABACUS Logo" style="height: 54px; width: auto;">
+            <div class="brand-text">
+              <span class="brand-name" style="font-size: 1.6rem;">PS <span class="logo-accent">ABACUS</span></span>
+              <span class="brand-tagline-nav" style="color: #f5a623;">A Journey to Excellence</span>
+            </div>
+          </div>
+          <p>
+            Committed to nurturing young minds with world-class training in Abacus, Vedic Maths, and Handwriting. Empowering children with cognitive speed, sharp memory, and unwavering confidence.
+          </p>
+          <div class="msme-badge-pill" style="font-size: 0.85rem; padding: 0.4rem 1.1rem; margin-bottom: 0;">
+            <i class="fa-solid fa-medal"></i> Registered with MSME
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h5>Our Programs</h5>
+          <ul class="footer-links">
+            <li><a href="/courses#abacus"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #f5a623;"></i> Abacus Mental Math</a></li>
+            <li><a href="/courses#vedic-maths"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #f5a623;"></i> Vedic Mathematics</a></li>
+            <li><a href="/courses#handwriting"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #f5a623;"></i> Handwriting Mastery</a></li>
+            <li><a href="/about"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #f5a623;"></i> About Piyushlok Education</a></li>
+          </ul>
+        </div>
+
+        <!-- Franchise & Opportunities -->
+        <div class="footer-col">
+          <h5>Franchise &amp; Centers</h5>
+          <ul class="footer-links">
+            <li><a href="/franchise"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #f5a623;"></i> Book a Franchise</a></li>
+            <li><a href="/franchise#support"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #f5a623;"></i> Full Technical Support</a></li>
+            <li><a href="/franchise#material"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #f5a623;"></i> Own Course Material</a></li>
+            <li><a href="/contact"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #f5a623;"></i> Center Locations</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact Information (Both Phone Numbers & Gmail) -->
+        <div class="footer-col">
+          <h5>Contact Us Directly</h5>
+          <ul class="footer-links" style="gap: 1.1rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: center;">
+              <i class="fa-brands fa-whatsapp" style="color: #25d366; font-size: 1.3rem;"></i>
+              <div>
+                <div style="font-size: 0.75rem; color: #94a3b8; text-transform: uppercase;">WhatsApp (Primary)</div>
+                <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hello%20PS%20ABACUS,%20I%20have%20an%20inquiry." target="_blank" rel="noopener" style="color: #25d366; font-weight: 700; font-size: 1.05rem;">
+                  {{ site.contact_phone_1_raw }}
+                </a>
+              </div>
+            </li>
+
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <i class="fa-solid fa-phone" style="color: #f5a623; font-size: 1.1rem; margin-top: 4px;"></i>
+              <div>
+                <div style="font-size: 0.75rem; color: #94a3b8; text-transform: uppercase;">Call Helplines</div>
+                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                  <a href="tel:+91{{ site.contact_phone_1_raw }}" style="color: #ffffff; font-weight: 600;">
+                    +91 {{ site.contact_phone_1_raw }}
+                  </a>
+                  <a href="tel:+91{{ site.contact_phone_2_raw }}" style="color: #ffffff; font-weight: 600;">
+                    +91 {{ site.contact_phone_2_raw }}
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li style="display: flex; gap: 0.75rem; align-items: center;">
+              <i class="fa-solid fa-envelope" style="color: #ea4335; font-size: 1.1rem;"></i>
+              <div>
+                <div style="font-size: 0.75rem; color: #94a3b8; text-transform: uppercase;">Official Gmail</div>
+                <a href="mailto:{{ site.contact_email }}" style="color: #ffffff; font-weight: 600; word-break: break-all;">
+                  {{ site.contact_email }}
+                </a>
+              </div>
+            </li>
+
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <i class="fa-solid fa-location-dot" style="color: #f5a623; margin-top: 4px;"></i>
+              <span style="font-size: 0.88rem;">15+ Centers Across Maharashtra &amp; India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar with Distinct Watermark -->
+      <div class="footer-bottom-bar">
+        <div class="copyright-text">
+          &copy; {{ site.copyright_year }} <strong>PS ABACUS</strong> (Piyushlok Education). All rights reserved.
+        </div>
+
+        <!-- Visible Watermark Credit requested by user -->
+        <div class="watermark-attribution" title="Website Certified & Crafted by Ninad Khune">
+          <i class="fa-solid fa-code" style="color: #f5a623;"></i>
+          <span>Website created by <span class="watermark-author-badge">Ninad Khune</span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Elegant Thank You Success Modal (No browser alerts) -->
+  <div id="thankYouModal" class="custom-modal-overlay" aria-hidden="true">
+    <div class="custom-modal-card">
+      <button type="button" class="modal-close-icon" onclick="closeThankYouModal()" aria-label="Close modal">&times;</button>
+      <div class="modal-icon-wrap">
+        <div class="modal-check-circle">
+          <i class="fa-solid fa-check"></i>
+        </div>
+      </div>
+      <h3 class="modal-title">Thank You, <span id="modalUserName" style="color: #f5a623;">Friend</span>!</h3>
+      <p class="modal-subtitle">Your inquiry has been successfully sent to our coordinator desk in real time.</p>
+      
+      <div class="modal-details-box">
+        <div class="modal-detail-row">
+          <span class="detail-label">Inquiry Type:</span>
+          <span class="detail-value" id="modalInquiryType">Student Admission</span>
+        </div>
+        <div class="modal-detail-row" id="modalCourseRow">
+          <span class="detail-label">Course Interested:</span>
+          <span class="detail-value" id="modalCourseVal">Abacus</span>
+        </div>
+        <div class="modal-detail-row" id="modalModelRow" style="display: none;">
+          <span class="detail-label">Center Model:</span>
+          <span class="detail-value" id="modalModelVal">Home-Based Center</span>
+        </div>
+        <div class="modal-detail-row">
+          <span class="detail-label">City:</span>
+          <span class="detail-value" id="modalCityVal">Pune</span>
+        </div>
+        <div class="modal-detail-row">
+          <span class="detail-label">Helpline:</span>
+          <span class="detail-value">9404853704 / 8275635904</span>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <a href="https://wa.me/919404853704" id="modalWhatsAppBtn" target="_blank" rel="noopener" class="btn-primary" style="background: #25d366; border-color: #25d366; color: #ffffff; justify-content: center; width: 100%; padding: 0.85rem;">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp Now
+        </a>
+        <button type="button" class="btn-secondary" onclick="closeThankYouModal()" style="width: 100%; justify-content: center; margin-top: 0.5rem; border-color: #cbd5e1; color: #475569; padding: 0.75rem;">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Quick Button linking to 9404853704 -->
+  <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hi%20PS%20ABACUS,%20I%20am%20interested%20in%20your%20classes/franchise" class="floating-whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp 9404853704">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Main JavaScript File with Cache-Buster v=2.3 -->
+  <script src="/static/js/main.js?v=2.3"></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

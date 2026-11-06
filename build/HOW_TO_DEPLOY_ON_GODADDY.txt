@@ -1,0 +1,16 @@
+# PSABACUS Static Website Deployment (GoDaddy)
+Created by: Ninad Khune
+WhatsApp Contact: +91 9404853704 | Email: psabacus01@gmail.com
+
+## HOW TO UPLOAD TO GODADDY:
+1. Log in to your GoDaddy Account -> Web Hosting -> cPanel -> File Manager.
+2. Navigate to the `public_html` directory.
+3. Upload `godaddy_public_html_ready.zip` and extract it, or upload all files from this `build` directory:
+   - `index.html`
+   - `courses.html`
+   - `franchise.html`
+   - `about.html`
+   - `contact.html`
+   - `.htaccess`
+   - `static/` (folder containing css, js, images)
+4. Done! Visit your domain and your website is live!

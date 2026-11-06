@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Priya Sharma",
+    "phone": "9876543210",
+    "email": "priya@example.com",
+    "type": "Student Admission",
+    "city": "Pune",
+    "message": "Interested in Abacus level 1 for 7 year old child",
+    "timestamp": "2026-11-06T03:06:31.066873"
+  },
+  {
+    "name": "Ninad Khune",
+    "phone": "8421053808",
+    "email": "",
+    "type": "Student Admission",
+    "city": "Kharghar",
+    "message": "",
+    "timestamp": "2026-11-06T03:22:57.552989"
+  }
+]

@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block title %}Contact &amp; Inquiries | Helplines: 9404853704 / 8275635904 | PS ABACUS{% endblock %}
+
+{% block content %}
+<!-- Dark Header -->
+<div class="dark-section-header" style="padding: 4.5rem 1rem 3.5rem;">
+  <div class="container">
+    <h1 class="section-title">
+      Contact &amp; <span class="highlight-gold">Inquiries</span>
+    </h1>
+    <p class="section-subtitle">
+      Connect directly via WhatsApp, Phone call, or submit an inquiry for real-time response &mdash; A Journey to Excellence.
+    </p>
+  </div>
+</div>
+
+<section style="padding: 4.5rem 0 5rem; background: #ffffff;">
+  <div class="container">
+    <!-- Contact Highlights Grid (Both numbers featured) -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1050px; margin: 0 auto 4rem;">
+      
+      <!-- Card 1: WhatsApp -->
+      <div style="background: #ffffff; border: 2.5px solid #25d366; border-radius: 18px; padding: 2.5rem 2rem; text-align: center; box-shadow: 0 15px 35px rgba(37, 211, 102, 0.15); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="width: 70px; height: 70px; border-radius: 50%; background: #dcfce7; color: #25d366; font-size: 2.4rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; border: 2px solid #86efac;">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: #15803d; background: #f0fdf4; padding: 0.3rem 0.9rem; border-radius: 9999px;">Instant Response</span>
+          <h2 style="font-size: 1.6rem; color: #0f172a; margin: 1rem 0 0.5rem;">WhatsApp Chat</h2>
+          <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.5;">
+            Direct 1-on-1 counseling for student admissions or franchise queries.
+          </p>
+          <div style="font-size: 1.5rem; font-weight: 900; color: #0f172a; margin-bottom: 1.5rem;">
+            {{ site.contact_phone_1_raw }}
+          </div>
+        </div>
+        <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hello%20PS%20ABACUS,%20I%20would%20like%20to%20inquire%20about%20classes/franchise." class="btn-primary" style="background: #25d366; border-color: #25d366; color: #ffffff; justify-content: center; font-size: 1rem; padding: 0.8rem 1.5rem;" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+
+      <!-- Card 2: Calling Helplines (Both Phone Numbers) -->
+      <div style="background: #ffffff; border: 1.5px solid #1a1a1a; border-radius: 18px; padding: 2.5rem 2rem; text-align: center; box-shadow: var(--card-shadow); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="width: 70px; height: 70px; border-radius: 50%; background: #fff8eb; color: #d97706; font-size: 2.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; border: 2px solid #fde68a;">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: #b45309; background: #fffbeb; padding: 0.3rem 0.9rem; border-radius: 9999px;">Direct Lines</span>
+          <h2 style="font-size: 1.6rem; color: #0f172a; margin: 1rem 0 0.5rem;">Phone Helplines</h2>
+          <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.5;">
+            Speak with coordinators. Mon &ndash; Sat, 9:00 AM &ndash; 7:30 PM.
+          </p>
+          <div style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 0.35rem;">
+            +91 {{ site.contact_phone_1_raw }}
+          </div>
+          <div style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 1.5rem;">
+            +91 {{ site.contact_phone_2_raw }}
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <a href="tel:+91{{ site.contact_phone_1_raw }}" class="btn-primary" style="background: #000000; border-color: #000000; color: #ffffff; flex: 1; justify-content: center; font-size: 0.88rem; padding: 0.75rem 0.4rem;">
+            <i class="fa-solid fa-phone"></i> Line 1
+          </a>
+          <a href="tel:+91{{ site.contact_phone_2_raw }}" class="btn-primary" style="background: #000000; border-color: #000000; color: #ffffff; flex: 1; justify-content: center; font-size: 0.88rem; padding: 0.75rem 0.4rem;">
+            <i class="fa-solid fa-phone"></i> Line 2
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Official Gmail -->
+      <div style="background: #ffffff; border: 1.5px solid #1a1a1a; border-radius: 18px; padding: 2.5rem 2rem; text-align: center; box-shadow: var(--card-shadow); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="width: 70px; height: 70px; border-radius: 50%; background: #fef2f2; color: #dc2626; font-size: 2.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; border: 2px solid #fecaca;">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: #b91c1c; background: #fef2f2; padding: 0.3rem 0.9rem; border-radius: 9999px;">Email Inquiry</span>
+          <h2 style="font-size: 1.6rem; color: #0f172a; margin: 1rem 0 0.5rem;">Official Gmail</h2>
+          <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.5;">
+            Detailed curriculum proposals, school tie-ups, or franchise inquiries.
+          </p>
+          <div style="font-size: 1.05rem; font-weight: 800; color: #0f172a; margin-bottom: 1.5rem; word-break: break-all;">
+            {{ site.contact_email }}
+          </div>
+        </div>
+        <a href="mailto:{{ site.contact_email }}?subject=PS%20ABACUS%20Inquiry" class="btn-secondary" style="border-color: #0f172a; color: #0f172a; justify-content: center; font-size: 1rem; padding: 0.8rem 1.5rem;">
+          <i class="fa-solid fa-envelope"></i> Send Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Connected Inquiry Form (Student & Franchise) -->
+    <div style="max-width: 850px; margin: 0 auto 5rem; background: #ffffff; border: 1.5px solid #1a1a1a; border-radius: 20px; padding: 3rem 2.5rem; box-shadow: var(--card-shadow);" class="inquiry-form-container">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <h3 style="font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem;">
+          Send An Online Inquiry
+        </h3>
+        <p style="color: #64748b; font-size: 1rem;">
+          Automatically logged to our real-time desk. We respond within a few hours!
+        </p>
+      </div>
+
+      <!-- Dual Mode Selector -->
+      <div class="form-toggle-tabs" style="max-width: 500px; margin: 0 auto 2rem;">
+        <button type="button" class="tab-btn active" data-mode="Student Admission">
+          <i class="fa-solid fa-user-graduate"></i> Student Admission
+        </button>
+        <button type="button" class="tab-btn" data-mode="Franchise Partnership">
+          <i class="fa-solid fa-building-columns"></i> Franchise Partnership
+        </button>
+      </div>
+
+      <!-- Status Alert Box -->
+      <div class="form-status-message"></div>
+
+      <!-- Google Connected Form -->
+      <form class="google-sheet-inquiry-form">
+        <input type="hidden" name="type" value="Student Admission">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Full Name *</label>
+            <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Phone / WhatsApp *</label>
+            <input type="tel" name="phone" class="form-control" placeholder="10-digit mobile number" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">City / Locality *</label>
+            <input type="text" name="city" class="form-control" placeholder="Your city / locality" required>
+          </div>
+
+          <div class="form-group student-course-group">
+            <label class="form-label">Select Course</label>
+            <select name="course" class="form-control form-select">
+              <option value="Abacus">Abacus (Ages 5-14)</option>
+              <option value="Vedic Maths">Vedic Maths (Ages 9+)</option>
+              <option value="Handwriting">Handwriting Mastery</option>
+              <option value="All Courses">Combined Programs</option>
+            </select>
+          </div>
+
+          <div class="form-group franchise-model-group" style="display: none;">
+            <label class="form-label">Proposed Center Model</label>
+            <select name="franchise_model" class="form-control form-select">
+              <option value="Home-Based Center">Home-Based Center</option>
+              <option value="Commercial Coaching Center">Dedicated Commercial Center</option>
+              <option value="School / Tuition Tie-up">School / Tuition Tie-up</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Questions or Details</label>
+            <textarea name="message" rows="3" class="form-control" placeholder="Child's name, age/class, preferred timings or franchise queries..."></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <button type="submit" class="btn-form-submit">
+              <span>Submit Inquiry</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div style="max-width: 850px; margin: 0 auto; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 20px; padding: 2.5rem 2rem;">
+      <h3 style="font-size: 1.8rem; font-weight: 800; text-align: center; margin-bottom: 1.5rem;">Frequently Asked Questions</h3>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; background: #ffffff;">
+          <h4 style="font-size: 1.1rem; color: #000000; margin-bottom: 0.4rem;"><i class="fa-solid fa-circle-question" style="color: #f5a623;"></i> How do I enroll my child for classes?</h4>
+          <p style="color: #4b5563; font-size: 0.92rem; line-height: 1.6;">You can either submit the inquiry form above or chat directly on WhatsApp at <strong>{{ site.contact_phone_1_raw }}</strong> / <strong>{{ site.contact_phone_2_raw }}</strong>. We will guide you with current batch timings and center options.</p>
+        </div>
+
+        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; background: #ffffff;">
+          <h4 style="font-size: 1.1rem; color: #000000; margin-bottom: 0.4rem;"><i class="fa-solid fa-circle-question" style="color: #f5a623;"></i> Can I start a PS ABACUS center from home?</h4>
+          <p style="color: #4b5563; font-size: 0.92rem; line-height: 1.6;">Yes! Our low-investment franchise model is uniquely designed to accommodate home-based tuition centers, school tie-ups, and dedicated commercial centers. We provide complete teacher training and original student kits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

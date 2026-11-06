@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="studentCap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="studentFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+    <linearGradient id="studentShirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="studentShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Glowing Aura Circle Background -->
+  <circle cx="50" cy="50" r="44" fill="#fffbeb" stroke="#fef3c7" stroke-width="2"/>
+
+  <!-- Student Body & Uniform -->
+  <g filter="url(#studentShadow)">
+    <!-- Shoulders / Jacket -->
+    <path d="M26,82 C26,67 36,65 50,65 C64,65 74,67 74,82 Z" fill="url(#studentShirt)"/>
+    <!-- White Inner Collar & Tie -->
+    <path d="M42,65 L50,75 L58,65 Z" fill="#ffffff"/>
+    <path d="M48,70 L52,70 L51,80 L49,80 Z" fill="#1e293b"/>
+
+    <!-- Neck -->
+    <rect x="45" y="58" width="10" height="9" fill="url(#studentFace)"/>
+
+    <!-- Cheerful Face -->
+    <circle cx="50" cy="46" r="15" fill="url(#studentFace)"/>
+    <!-- Smiling Eyes & Smile -->
+    <ellipse cx="44" cy="45" rx="1.5" ry="2" fill="#1e293b"/>
+    <ellipse cx="56" cy="45" rx="1.5" ry="2" fill="#1e293b"/>
+    <path d="M46,52 Q50,56 54,52" fill="none" stroke="#1e293b" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Rosy Cheeks -->
+    <circle cx="41" cy="49" r="2" fill="#f87171" opacity="0.6"/>
+    <circle cx="59" cy="49" r="2" fill="#f87171" opacity="0.6"/>
+
+    <!-- Hair -->
+    <path d="M35,42 C35,32 45,28 50,28 C55,28 65,32 65,42 C62,37 57,35 50,35 C43,35 38,37 35,42 Z" fill="#1e293b"/>
+
+    <!-- Graduation / Scholar Mortarboard Cap -->
+    <polygon points="50,16 76,26 50,36 24,26" fill="url(#studentCap)"/>
+    <path d="M34,31 L34,40 C34,44 41,47 50,47 C59,47 66,44 66,40 L66,31" fill="none" stroke="url(#studentCap)" stroke-width="2.5"/>
+    <!-- Golden Tassel -->
+    <line x1="50" y1="26" x2="68" y2="34" stroke="#f5a623" stroke-width="1.8"/>
+    <circle cx="68" cy="35" r="2.5" fill="#f5a623"/>
+    <line x1="68" y1="36" x2="68" y2="42" stroke="#f5a623" stroke-width="2"/>
+  </g>
+</svg>

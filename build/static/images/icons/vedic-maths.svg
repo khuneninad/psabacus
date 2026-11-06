@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- Solid High-Contrast Fill (Matches Reference Image Pastel Sky Blue) -->
+    <linearGradient id="brainFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="50%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+    <filter id="brainPopShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Complete Brain Base with Solid Sky-Blue Fill and Crisp Dark Outline -->
+  <g filter="url(#brainPopShadow)">
+    <!-- Entire Brain Contour (Left & Right Hemispheres Combined) -->
+    <path d="M50,18 
+             C44,17 37,19 32,23 
+             C26,27 22,33 21,40 
+             C17,43 15,48 15,54 
+             C15,60 18,65 22,68 
+             C20,73 23,79 28,82 
+             C33,85 40,84 45,81 
+             C47,82 48.5,82 50,82 
+             C51.5,82 53,82 55,81 
+             C60,84 67,85 72,82 
+             C77,79 80,73 78,68 
+             C82,65 85,60 85,54 
+             C85,48 83,43 79,40 
+             C78,33 74,27 68,23 
+             C63,19 56,17 50,18 Z" 
+          fill="url(#brainFill)" 
+          stroke="#0f172a" 
+          stroke-width="3.5" 
+          stroke-linejoin="round"/>
+
+    <!-- Central Longitudinal Fissure (Dividing Left & Right Hemispheres) -->
+    <path d="M50,18 L50,82" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Left Hemisphere Neural Circuit Traces (Black with Circuit Dots) -->
+  <g stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Top Lobal Circuit -->
+    <path d="M28,32 L36,38 L44,34"/>
+    <!-- Middle Frontal Circuit -->
+    <path d="M21,50 L32,50 L38,58"/>
+    <!-- Lower Temporal Circuit -->
+    <path d="M28,68 L36,64 L44,72"/>
+  </g>
+
+  <!-- Right Hemisphere Neural Circuit Traces -->
+  <g stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Top Lobal Circuit -->
+    <path d="M72,32 L64,38 L56,34"/>
+    <!-- Middle Frontal Circuit -->
+    <path d="M79,50 L68,50 L62,58"/>
+    <!-- Lower Temporal Circuit -->
+    <path d="M72,68 L64,64 L56,72"/>
+  </g>
+
+  <!-- Circuit Synapse Node Dots (Crisp Black Nodes matching reference style) -->
+  <!-- Left Nodes -->
+  <circle cx="28" cy="32" r="3.2" fill="#0f172a"/>
+  <circle cx="36" cy="38" r="3.2" fill="#0f172a"/>
+  <circle cx="44" cy="34" r="3.2" fill="#0f172a"/>
+  <circle cx="21" cy="50" r="3.2" fill="#0f172a"/>
+  <circle cx="32" cy="50" r="3.2" fill="#0f172a"/>
+  <circle cx="38" cy="58" r="3.2" fill="#0f172a"/>
+  <circle cx="28" cy="68" r="3.2" fill="#0f172a"/>
+  <circle cx="36" cy="64" r="3.2" fill="#0f172a"/>
+  <circle cx="44" cy="72" r="3.2" fill="#0f172a"/>
+
+  <!-- Right Nodes -->
+  <circle cx="72" cy="32" r="3.2" fill="#0f172a"/>
+  <circle cx="64" cy="38" r="3.2" fill="#0f172a"/>
+  <circle cx="56" cy="34" r="3.2" fill="#0f172a"/>
+  <circle cx="79" cy="50" r="3.2" fill="#0f172a"/>
+  <circle cx="68" cy="50" r="3.2" fill="#0f172a"/>
+  <circle cx="62" cy="58" r="3.2" fill="#0f172a"/>
+  <circle cx="72" cy="68" r="3.2" fill="#0f172a"/>
+  <circle cx="64" cy="64" r="3.2" fill="#0f172a"/>
+  <circle cx="56" cy="72" r="3.2" fill="#0f172a"/>
+
+  <!-- Subtle Inner Node Highlights -->
+  <circle cx="36" cy="38" r="1.2" fill="#ffffff"/>
+  <circle cx="64" cy="38" r="1.2" fill="#ffffff"/>
+  <circle cx="32" cy="50" r="1.2" fill="#ffffff"/>
+  <circle cx="68" cy="50" r="1.2" fill="#ffffff"/>
+</svg>

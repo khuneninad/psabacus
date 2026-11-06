@@ -1,0 +1,414 @@
+{% extends "base.html" %}
+
+{% block title %}PS ABACUS | A Journey to Excellence | WhatsApp 9404853704{% endblock %}
+
+{% block content %}
+<!-- ========================================================================
+     HERO SECTION (Matching Reference Image 3 with New Official Logo)
+     ======================================================================== -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <!-- High-Res Main Logo Emblem -->
+      <div class="hero-logo-emblem">
+        <img src="/static/images/logo-transparent.png" alt="PS ABACUS Official Logo">
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="hero-title">
+        PS <span class="brand-accent">ABACUS</span>
+      </h1>
+
+      <!-- Slogan: A Journey to Excellence -->
+      <p class="hero-subtitle">
+        A Journey to Excellence
+      </p>
+
+      <!-- MSME Pill Badge (Image 3) -->
+      <div>
+        <div class="msme-badge-pill">
+          <i class="fa-solid fa-medal"></i> Registered with MSME
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="hero-cta-group">
+        <a href="#courses" class="btn-primary">
+          <i class="fa-solid fa-book-open"></i> Explore Courses
+        </a>
+        <a href="#franchise" class="btn-secondary">
+          <i class="fa-solid fa-handshake"></i> Book a Franchise
+        </a>
+        <a href="#inquiry-hub" class="btn-primary" style="background: #ffffff; border-color: #ffffff; color: #000000;">
+          <i class="fa-solid fa-pen-to-square"></i> Send Inquiry
+        </a>
+        <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hello%20PS%20ABACUS,%20I%20want%20to%20inquire%20about%20classes." class="btn-primary btn-whatsapp-hero" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp: {{ site.contact_phone_1_raw }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     OUR MISSION & IMPACT STATS (Matching Reference Image 3 with Improvised Logos)
+     ======================================================================== -->
+<section class="mission-section">
+  <div class="container">
+    <!-- Mission Icon & Statement -->
+    <div style="width: 56px; height: 56px; margin: 0 auto 1rem;">
+      <img src="/static/images/icons/mission-target.svg" alt="Our Mission Icon" style="width: 100%; height: 100%;">
+    </div>
+    <h2 class="mission-heading">Our Mission</h2>
+    <p class="mission-text">
+      At PS ABACUS, we are committed to nurturing young minds with world-class training in Abacus, Vedic Maths, and Handwriting. Our programs are designed to boost mental agility, enhance concentration, and build a strong academic foundation &mdash; transforming the way children learn and grow.
+    </p>
+
+    <!-- Stats Grid with Top-Notch Vector Icons (500+ Students, 15+ Centers, 5+ Years) -->
+    <div class="stats-grid">
+      <!-- Card 1: 500+ Students -->
+      <div class="stat-card">
+        <div class="stat-icon">
+          <img src="/static/images/icons/student-scholar.svg" alt="500+ Students Icon">
+        </div>
+        <div class="stat-number">
+          <span class="counter-value" data-target="500" data-suffix="+">500+</span>
+        </div>
+        <div class="stat-label">Students</div>
+      </div>
+
+      <!-- Card 2: 15+ Centers -->
+      <div class="stat-card">
+        <div class="stat-icon">
+          <img src="/static/images/icons/center-location.svg" alt="15+ Centers Icon">
+        </div>
+        <div class="stat-number">
+          <span class="counter-value" data-target="15" data-suffix="+">15+</span>
+        </div>
+        <div class="stat-label">Centers</div>
+      </div>
+
+      <!-- Card 3: 5+ Years -->
+      <div class="stat-card">
+        <div class="stat-icon">
+          <img src="/static/images/icons/years-excellence.svg" alt="5+ Years Icon">
+        </div>
+        <div class="stat-number">
+          <span class="counter-value" data-target="5" data-suffix="+">5+</span>
+        </div>
+        <div class="stat-label">Years</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     OUR COURSES SECTION (Matching Reference Image 2 with Improvised SVGs)
+     ======================================================================== -->
+<section class="courses-section" id="courses">
+  <!-- Dark Header Bar -->
+  <div class="dark-section-header">
+    <div class="container">
+      <h2 class="section-title">
+        Our <span class="highlight-gold">Courses</span>
+      </h2>
+      <p class="section-subtitle">
+        Comprehensive programs designed to unlock every child's potential
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="courses-grid">
+      {% for course in courses %}
+      <!-- Course Card: {{ course.title }} -->
+      <div class="course-card" id="{{ course.slug }}">
+        <!-- Yellow Header with Top-Notch Vector Icon -->
+        <div class="course-card-top">
+          <div class="course-icon-badge">
+            <img src="/static/images/{{ course.icon }}" alt="{{ course.title }} Icon" onerror="this.onerror=null; this.src='static/images/extracted/icon_{{ 'vedic' if course.slug == 'vedic-maths' else course.slug }}.png';">
+          </div>
+        </div>
+
+        <!-- Card Body -->
+        <div class="course-card-body">
+          <h3 class="course-title">{{ course.title }}</h3>
+          <p class="course-description">
+            {{ course.description }}
+          </p>
+
+          <!-- Checklist with Yellow Badges -->
+          <ul class="course-checklist">
+            {% for item in course.benefits %}
+            <li>
+              <span class="check-icon">&#10004;</span>
+              <span>{{ item }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+
+          <!-- Card Footer with Direct WhatsApp Connection -->
+          <div class="course-card-footer">
+            <span class="course-age-pill">
+              <i class="fa-solid fa-child"></i> {{ course.age_group }}
+            </span>
+            <a href="https://wa.me/{{ site.contact_whatsapp }}?text={{ course.whatsapp_msg|urlencode }}" class="btn-card-action" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp" style="color: #25d366; font-size: 1.1rem;"></i>
+              <span>Inquire on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     BOOK A FRANCHISE (Matching Reference Image 1 with Improvised Icons)
+     ======================================================================== -->
+<section class="franchise-section" id="franchise">
+  <!-- Dark Header Bar -->
+  <div class="dark-section-header franchise-header">
+    <div class="container">
+      <h2 class="section-title">
+        Book a <span class="highlight-gold">Franchise</span>
+      </h2>
+      <p class="section-subtitle">
+        {{ franchise.subheadline }}
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- 3 Franchise Feature Cards with Improvised Vector Icons (Image 1 Middle) -->
+    <div class="franchise-cards-grid">
+      {% for pillar in franchise.three_pillars %}
+      <div class="franchise-feature-card">
+        <div class="feature-circle-icon">
+          <img src="/static/images/{{ pillar.icon }}" alt="{{ pillar.title }} Icon">
+        </div>
+        <h3 class="franchise-card-title">{{ pillar.title }}</h3>
+        <p class="franchise-card-text">
+          {{ pillar.description }}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Golden Highlight Banner (Image 1 Bottom) -->
+  <div class="golden-banner-section">
+    <div class="golden-banner-inner">
+      <!-- 5 Black Stars -->
+      <div class="banner-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <h3 class="golden-banner-title">
+        {{ franchise.golden_banner.title }}
+      </h3>
+      <p class="golden-banner-text">
+        {{ franchise.golden_banner.text }}
+      </p>
+      <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hello%20PS%20ABACUS,%20I%20am%20interested%20in%20booking%20a%20franchise%20in%20my%20city." class="btn-banner-cta" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> Book a Franchise on WhatsApp: {{ site.contact_phone_1_raw }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     WHY PARTNER WITH PS ABACUS (Franchise Benefits Grid)
+     ======================================================================== -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-head-light">
+      <h2 class="title">Why Join The <span class="highlight-gold" style="color: #d98e16;">PS ABACUS Family?</span></h2>
+      <p class="subtitle">A complete turnkey franchise model designed for rapid setup, low overheads, and high student satisfaction.</p>
+    </div>
+
+    <div class="benefits-grid">
+      {% for item in franchise.franchise_benefits %}
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fa-solid fa-check-double"></i>
+        </div>
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     INQUIRY & CONTACT HUB (Google Sheets Connected + Direct WhatsApp/Phone)
+     ======================================================================== -->
+<section class="inquiry-section" id="inquiry-hub" style="background: #ffffff; padding: 5rem 0;">
+  <div class="container">
+    <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem;">
+      <span class="msme-badge-pill" style="font-size: 0.85rem; padding: 0.4rem 1.2rem; margin-bottom: 1rem;">
+        <i class="fa-solid fa-headset"></i> Official Helpdesk
+      </span>
+      <h2 style="font-size: 2.5rem; font-weight: 800; color: #000000; margin-bottom: 0.8rem;">
+        Admission &amp; Franchise Inquiry
+      </h2>
+      <p style="color: #64748b; font-size: 1.1rem; line-height: 1.6;">
+        Submit your inquiry below, or reach out directly to our coordinators via WhatsApp or Phone.
+      </p>
+    </div>
+
+    <!-- Dual Layout: Form + Direct Contact Details -->
+    <div class="inquiry-wrapper inquiry-form-container">
+      <!-- Left Column: Direct Helplines & Contact Information -->
+      <div class="inquiry-info-pane">
+        <div>
+          <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: #f5a623; display: inline-block; margin-bottom: 0.5rem;">
+            Direct Helpdesk
+          </span>
+          <h3 style="font-size: 2.1rem; font-weight: 800; margin-bottom: 0.8rem;">Get in Touch</h3>
+          <p style="color: #94a3b8; font-size: 0.98rem; line-height: 1.6; margin-bottom: 2rem;">
+            Whether you want to enroll your child for mental math excellence or book a franchise in your city, our coordinators are ready to assist you.
+          </p>
+
+          <ul class="contact-meta-list">
+            <li class="contact-meta-item">
+              <div class="meta-icon-circle" style="color: #25d366; border-color: rgba(37, 211, 102, 0.4);">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <div class="meta-label">Primary WhatsApp</div>
+                <div class="meta-val">
+                  <a href="https://wa.me/{{ site.contact_whatsapp }}?text=Hello%20PS%20ABACUS,%20I%20have%20an%20inquiry." target="_blank" rel="noopener" style="color: #25d366; text-decoration: underline;">
+                    {{ site.contact_phone_1_raw }}
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="contact-meta-item">
+              <div class="meta-icon-circle">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="meta-label">Calling Helplines</div>
+                <div class="meta-val" style="display: flex; flex-direction: column; gap: 0.2rem;">
+                  <a href="tel:+91{{ site.contact_phone_1_raw }}" style="color: #ffffff;">
+                    +91 {{ site.contact_phone_1_raw }}
+                  </a>
+                  <a href="tel:+91{{ site.contact_phone_2_raw }}" style="color: #ffffff;">
+                    +91 {{ site.contact_phone_2_raw }}
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="contact-meta-item">
+              <div class="meta-icon-circle" style="color: #ea4335; border-color: rgba(234, 67, 53, 0.4);">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="meta-label">Official Gmail</div>
+                <div class="meta-val" style="font-size: 0.95rem; word-break: break-all;">
+                  <a href="mailto:{{ site.contact_email }}" style="color: #ffffff;">
+                    {{ site.contact_email }}
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="contact-meta-item">
+              <div class="meta-icon-circle">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="meta-label">Network Scope</div>
+                <div class="meta-val">15+ Centers Across Maharashtra &amp; India</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 2rem; font-size: 0.8rem; color: #64748b; border-top: 1px solid #1f2937; padding-top: 1rem;">
+          Architected by Ninad Khune
+        </div>
+      </div>
+
+      <!-- Right Column: Google Sheets Connected Inquiry Form -->
+      <div class="inquiry-form-pane">
+        <!-- Dual Tabs: Student Admission vs Franchise Partnership -->
+        <div class="form-toggle-tabs">
+          <button type="button" class="tab-btn active" data-mode="Student Admission">
+            <i class="fa-solid fa-user-graduate"></i> Student Admission
+          </button>
+          <button type="button" class="tab-btn" data-mode="Franchise Partnership">
+            <i class="fa-solid fa-building-columns"></i> Franchise Partnership
+          </button>
+        </div>
+
+        <!-- Submission Status Message Container -->
+        <div class="form-status-message"></div>
+
+        <!-- Connected Form (Submits to Google Apps Script Web App) -->
+        <form class="google-sheet-inquiry-form" id="inquiryForm">
+          <!-- Hidden Type Field (Auto-updates with tabs) -->
+          <input type="hidden" name="type" value="Student Admission">
+
+          <div class="form-grid">
+            <!-- Full Name -->
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" name="name" class="form-control" placeholder="Your name" required>
+            </div>
+
+            <!-- Phone / WhatsApp Number -->
+            <div class="form-group">
+              <label class="form-label">Phone / WhatsApp *</label>
+              <input type="tel" name="phone" class="form-control" placeholder="10-digit mobile number" required>
+            </div>
+
+            <!-- City / Location -->
+            <div class="form-group">
+              <label class="form-label">City / Locality *</label>
+              <input type="text" name="city" class="form-control" placeholder="e.g. Pune, Nagpur, Mumbai" required>
+            </div>
+
+            <!-- Student Mode: Course Selection -->
+            <div class="form-group student-course-group">
+              <label class="form-label">Select Course</label>
+              <select name="course" class="form-control form-select">
+                <option value="Abacus">Abacus (Ages 5-14)</option>
+                <option value="Vedic Maths">Vedic Maths (Ages 9+)</option>
+                <option value="Handwriting">Handwriting Mastery</option>
+                <option value="All Courses">Combined Programs</option>
+              </select>
+            </div>
+
+            <!-- Franchise Mode: Proposed Center Type (Hidden by default) -->
+            <div class="form-group franchise-model-group" style="display: none;">
+              <label class="form-label">Proposed Center Model</label>
+              <select name="franchise_model" class="form-control form-select">
+                <option value="Home-Based Center">Home-Based Center</option>
+                <option value="Commercial Coaching Center">Dedicated Commercial Center</option>
+                <option value="School / Tuition Tie-up">School / Tuition Tie-up</option>
+              </select>
+            </div>
+
+            <!-- Message / Notes -->
+            <div class="form-group full-width">
+              <label class="form-label">Message / Details</label>
+              <textarea name="message" rows="3" class="form-control" placeholder="Child's name, age/class, preferred timing or franchise questions..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group full-width">
+              <button type="submit" class="btn-form-submit">
+                <span>Submit Inquiry</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="paperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="penBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="penGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe685"/>
+      <stop offset="100%" stop-color="#f5a623"/>
+    </linearGradient>
+    <filter id="docShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Lined Practice Sheet / Document -->
+  <g filter="url(#docShadow)">
+    <rect x="18" y="14" width="56" height="72" rx="6" fill="url(#paperGrad)" stroke="#1e293b" stroke-width="2"/>
+    <!-- Folded Corner Detail -->
+    <path d="M62,14 L74,26 L62,26 Z" fill="#e2e8f0" stroke="#1e293b" stroke-width="1.5"/>
+    
+    <!-- Handwriting Practice Grid Lines -->
+    <line x1="26" y1="32" x2="56" y2="32" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="26" y1="42" x2="66" y2="42" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="2, 2"/>
+    <line x1="26" y1="50" x2="66" y2="50" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round"/>
+    
+    <line x1="26" y1="62" x2="66" y2="62" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="2, 2"/>
+    <line x1="26" y1="70" x2="52" y2="70" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Beautiful Calligraphy Flow Stroke -->
+    <path d="M26,48 C34,44 38,54 44,48 C48,44 54,46 58,48" fill="none" stroke="#f5a623" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Elegant Writing Pen Tilted Diagonally -->
+  <g transform="translate(62, 48) rotate(-42)">
+    <!-- Pen Body -->
+    <rect x="-5" y="-36" width="10" height="42" rx="2" fill="url(#penBody)" stroke="#334155" stroke-width="1"/>
+    <!-- Gold Ring Accents -->
+    <rect x="-5.5" y="-8" width="11" height="4" fill="url(#penGold)"/>
+    <rect x="-5.5" y="-34" width="11" height="3" fill="url(#penGold)"/>
+    <!-- Nib Base -->
+    <path d="M-5,6 L5,6 L3,16 L-3,16 Z" fill="#475569"/>
+    <!-- Golden Fountain Nib -->
+    <path d="M-3,16 L0,25 L3,16 Z" fill="url(#penGold)" stroke="#d97706" stroke-width="0.6"/>
+    <!-- Nib Slit -->
+    <line x1="0" y1="16" x2="0" y2="23" stroke="#000000" stroke-width="0.8"/>
+  </g>
+
+  <!-- Ink Glow Sparkle -->
+  <circle cx="65" cy="49" r="2" fill="#f5a623"/>
+  <path d="M78,28 L80,24 L82,28 L86,30 L82,32 L80,36 L78,32 L74,30 Z" fill="#f5a623"/>
+</svg>

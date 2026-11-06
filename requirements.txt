@@ -1,0 +1,4 @@
+# PSABACUS Website Requirements
+# Designed & Developed by Ninad Khune
+Flask>=3.0.0
+gunicorn>=21.2.0

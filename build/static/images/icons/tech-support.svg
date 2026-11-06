@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="supportBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="headsetDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="supportAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="headsetShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Circular Badge -->
+  <circle cx="50" cy="50" r="44" fill="url(#supportBg)" stroke="#bfdbfe" stroke-width="2.5" filter="url(#headsetShadow)"/>
+  
+  <!-- Inner Subtle Ring -->
+  <circle cx="50" cy="50" r="38" fill="none" stroke="#93c5fd" stroke-width="1.2" stroke-dasharray="3, 3"/>
+
+  <!-- Headset Headband Arch -->
+  <path d="M26,52 C26,34 36,25 50,25 C64,25 74,34 74,52" fill="none" stroke="url(#headsetDark)" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Headband Comfort Cushion -->
+  <path d="M36,27 C42,24 58,24 64,27" fill="none" stroke="url(#supportAccent)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Left Ear Cushion -->
+  <g transform="translate(23, 47)">
+    <rect x="-3" y="0" width="10" height="19" rx="5" fill="url(#headsetDark)"/>
+    <rect x="-1" y="2" width="6" height="15" rx="3" fill="#334155"/>
+  </g>
+
+  <!-- Right Ear Cushion -->
+  <g transform="translate(71, 47)">
+    <rect x="-3" y="0" width="10" height="19" rx="5" fill="url(#headsetDark)"/>
+    <rect x="-1" y="2" width="6" height="15" rx="3" fill="#334155"/>
+  </g>
+
+  <!-- Microphone Boom Arm -->
+  <path d="M72,62 C72,74 62,77 50,77 L46,77" fill="none" stroke="url(#headsetDark)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Microphone Tip -->
+  <rect x="40" y="74" width="7" height="6" rx="3" fill="url(#supportAccent)"/>
+
+  <!-- 24/7 Technical Signal Waves -->
+  <circle cx="50" cy="48" r="4" fill="#f5a623"/>
+  <path d="M42,48 C42,44 45,41 50,41 C55,41 58,44 58,48" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M37,48 C37,39 42,35 50,35 C58,35 63,39 63,48" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+</svg>

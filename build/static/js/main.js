@@ -299,6 +299,16 @@ document.addEventListener("DOMContentLoaded", function () {
           city: city
         });
 
+        // Track GA4 Conversion Event
+        if (typeof gtag === "function") {
+          gtag("event", "generate_lead", {
+            event_category: "Inquiry",
+            inquiry_type: type,
+            course: finalCourse,
+            city: city
+          });
+        }
+
         // Reset form inputs
         form.reset();
       })
@@ -318,6 +328,29 @@ document.addEventListener("DOMContentLoaded", function () {
           `;
         }
       });
+    });
+  });
+
+  // Track WhatsApp and Phone Clicks in GA4
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    link.addEventListener("click", function () {
+      if (typeof gtag === "function") {
+        gtag("event", "whatsapp_click", {
+          event_category: "Engagement",
+          link_url: this.href
+        });
+      }
+    });
+  });
+
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener("click", function () {
+      if (typeof gtag === "function") {
+        gtag("event", "phone_call_click", {
+          event_category: "Engagement",
+          phone_number: this.href
+        });
+      }
     });
   });
 });

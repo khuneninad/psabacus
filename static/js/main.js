@@ -83,6 +83,17 @@ window.addEventListener("click", function (e) {
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Real-Time Phone Input Sanitizer (Enforces strictly 10 digits, blocks all special characters/letters)
+  const phoneFields = document.querySelectorAll("input[name='phone']");
+  phoneFields.forEach(field => {
+    field.setAttribute("maxlength", "10");
+    field.setAttribute("inputmode", "numeric");
+    field.setAttribute("pattern", "[0-9]{10}");
+    field.addEventListener("input", function () {
+      this.value = this.value.replace(/[^0-9]/g, "").slice(0, 10);
+    });
+  });
+
   // 1. Mobile Menu Toggle
   const mobileToggleBtn = document.querySelector(".mobile-toggle");
   const mobileCloseBtn = document.querySelector(".mobile-close-btn");
@@ -216,8 +227,21 @@ document.addEventListener("DOMContentLoaded", function () {
         if (statusBox) {
           statusBox.style.display = "block";
           statusBox.className = "form-status-message status-error";
-          statusBox.innerHTML = "Please enter your name, phone number, and city.";
+          statusBox.innerHTML = "Please enter your name, 10-digit phone number, and city.";
         }
+        return;
+      }
+
+      // Strict 10-Digit Phone Validation (Must be exactly 10 numeric digits, no special characters)
+      const phoneDigits = phone.replace(/[^0-9]/g, "");
+      if (phone.length !== 10 || phoneDigits.length !== 10 || !/^[0-9]{10}$/.test(phone)) {
+        if (statusBox) {
+          statusBox.style.display = "block";
+          statusBox.className = "form-status-message status-error";
+          statusBox.innerHTML = "Please enter a valid 10-digit mobile number (digits only, no spaces or special characters).";
+        }
+        const phoneInputEl = this.querySelector("[name='phone']");
+        if (phoneInputEl) phoneInputEl.focus();
         return;
       }
 

@@ -10,7 +10,7 @@
  */
 
 // Official Google Apps Script Webhook Endpoint
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzayThpTwMmu9oo1z6dfKEX17B1fVf1lSdrhqxQNM1rFXOM3vbAsbo40AMHmetkJo35MA/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw3Qy_2TnH4q9QqOfiYZr_Z36e7PI5Q8dkgP6F7iDBkOV_E8EK_zSQbAKZztMd-dmw/exec";
 
 // Modal Management Functions
 function openThankYouModal(info) {

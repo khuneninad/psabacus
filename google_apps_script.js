@@ -21,7 +21,7 @@
 // 1. RECIPIENT EMAIL(S) FOR INSTANT ALERTS:
 // (You can list one email or multiple separated by comma)
 // ========================================================================
-const NOTIFICATION_EMAIL = "psabacus01@gmail.com, ninadkhune2@gmail.com";
+const NOTIFICATION_EMAIL = "psabacus01@gmail.com";
 
 
 /**
@@ -58,7 +58,7 @@ function extractInquiryData(e) {
           }
           return data;
         }
-      } catch (jsonErr) {}
+      } catch (jsonErr) { }
     }
 
     // Check if it's URL-encoded string (key=value&key2=val2)
@@ -73,7 +73,7 @@ function extractInquiryData(e) {
             data[key] = val;
           }
         }
-      } catch (urlErr) {}
+      } catch (urlErr) { }
     }
   }
 
@@ -146,8 +146,6 @@ ${specificDetailLine}
 ⚡ Quick Actions:
 • WhatsApp Contact: https://wa.me/91${cleanPhoneDigits}
 • Call Directly: tel:${cleanPhoneDigits}
-• Center Helplines: 9404853704 / 8275635904
-• Official Email: psabacus01@gmail.com
 ---------------------------------------------------
 Website Created & Architected by Ninad Khune
 `;
